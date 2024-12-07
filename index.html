@@ -16,7 +16,7 @@
             height: 100vh;
             width: 100vw;
             color: rgb(255, 255, 255);
-            background-color: tomato;
+            background-color: #fa4d4d;
             font-family: 'Old Standard TT', serif;
             text-align: center;
             overflow: hidden;
@@ -52,7 +52,7 @@
 </head>
 
 <body>
-    <h1 id='title'>O'level Countdown</h1>
+    <h1 id='title'>Term 2 Exams</h1>
     <div class="countdown-wrapper">
 
         <p id="days"></p>
@@ -92,7 +92,7 @@
             }
 
         }
-        //?duedate=2021-05-01T09:00&title=O'Level Countdown
+        //?duedate=2025-05-01T09:00&title=O'Level Countdown
         let stringy = window.location.search;
         let urlparams = new URLSearchParams(stringy);
         let urlobjects = Object.fromEntries(urlparams)
@@ -101,7 +101,7 @@
             var countDownDate = new Date(dueDateTime).getTime();
             document.getElementById('title').innerHTML = urlparams.get('title')
         } else {
-            var countDownDate = new Date('1 May, 2021 09:00:00').getTime();
+            var countDownDate = new Date('20 April, 2025 09:30:00').getTime();
             
         }
 
@@ -131,7 +131,7 @@
 
         setInterval(() => {
             let now = new Date();
-            let millisecondsTillNine = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 9, 0, 0, 0) - now;
+            let millisecondsTillNine = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0, 0, 0) - now;
             if (millisecondsTillNine < 0) {
                 millisecondsTillNine += 86400000; // it's after 09am, try 09am tomorrow.
             }
